@@ -1,5 +1,7 @@
 @echo off
 
+net.exe session 1>NUL 2>NUL || (echo This script requires administrative permissions. Please run as administrator. & pause & exit /B 1)
+
 echo/
 echo The explorer process must be temporarily killed before deleting the cache files. 
 echo/
