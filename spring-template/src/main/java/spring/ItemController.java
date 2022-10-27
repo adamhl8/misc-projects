@@ -1,4 +1,4 @@
-package checkpoint;
+package spring;
 
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/api/items")
+@RequestMapping("/items")
 public class ItemController {
 
   private final ItemRepo itemRepo;
@@ -40,15 +40,15 @@ public class ItemController {
   }
 
   @PatchMapping("/{id}")
-  public Item updateItem(@PathVariable Integer id, @RequestBody Map<String, Boolean> body) throws Exception {
+  public Item updateItem(@PathVariable Integer id, @RequestBody Map<String, String> body) throws Exception {
     Item item = itemRepo.findById(id).orElseThrow();
 
-    if (body.get("completed") != null) item.setCompleted(body.get("completed"));
-    else throw new InvalidRequestException();
+    // if (body.get("key") != null)
+    // else throw new InvalidRequestException();
 
     return itemRepo.save(item);
   }
-
+  
   @DeleteMapping("/{id}")
   public void deleteItem(@PathVariable Integer id) {
     itemRepo.deleteById(id);

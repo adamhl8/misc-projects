@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "./App.css.js.js.js"
+import "./App.css"
 import ky from "ky"
 import { z } from "zod"
 import ItemList from "./components/ItemList.js"
@@ -17,7 +17,7 @@ export type TItems = z.infer<typeof Items>
 
 export const URL = "http://localhost:8080/api"
 
-function App() {
+const App = () => {
   const [items, setItems] = useState<TItems>([])
 
   const getItems = async () => {
