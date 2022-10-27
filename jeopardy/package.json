@@ -1,0 +1,16 @@
+{
+  "name": "the-answer-is-react",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  },
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}
