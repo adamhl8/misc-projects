@@ -6,8 +6,9 @@ import { theme } from "./theme.js"
 
 const App = () => {
   return (
-    <>
-    </>
+    <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
+      <h1>:)</h1>
+    </MantineProvider>
   )
 }
 
