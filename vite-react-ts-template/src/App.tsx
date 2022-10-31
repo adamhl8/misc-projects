@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react"
-import "./App.css"
+import { MantineProvider } from "@mantine/core"
 import ky from "ky"
+import { useEffect, useState } from "react"
 import { z } from "zod"
-
-export const URL = "http://localhost:8080"
+import { theme } from "./theme.js"
 
 const App = () => {
   return (
