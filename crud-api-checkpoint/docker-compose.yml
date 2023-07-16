@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-crud-checkpoint
+    ports:
+      - 8432:5432
+    volumes:
+      - ./postgres/:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PUID=1000
+      - PGID=1000
